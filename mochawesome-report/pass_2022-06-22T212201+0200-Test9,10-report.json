@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-22T19:21:45.887Z",
+    "end": "2022-06-22T19:22:01.206Z",
+    "duration": 15319,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "af8c9bc0-5a8f-45ee-b50f-8d8ea52bbd8f",
+      "title": "",
+      "fullFile": "cypress/integration/myTests/Test9,10.spec.js",
+      "file": "cypress/integration/myTests/Test9,10.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "648bf82d-0fd1-46e0-943e-d2a896d4d58f",
+          "title": "Test9",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test logowania formularza czajnikowo.pl",
+              "fullTitle": "Test9 Test logowania formularza czajnikowo.pl",
+              "timedOut": null,
+              "duration": 9323,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.czajnikowy.com.pl/');\ncy.get('.header-nav > .account-item > .nav-top-link > span').click();\ncy.get('#username').type('abc@cba.pl');\ncy.get('#password').type('falsepassword');\ncy.get(':nth-child(3) > .woocommerce-button').click();\ncy.get('.message-container').should('contain', 'Nieznany adres e-mail. Proszę sprawdzić ponownie lub wypróbować swoją nazwę użytkownika.');",
+              "err": {},
+              "uuid": "a7563684-a8fa-4950-956c-7df1643e313c",
+              "parentUUID": "648bf82d-0fd1-46e0-943e-d2a896d4d58f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test formularza kontaktowego czajnikowo.pl",
+              "fullTitle": "Test9 Test formularza kontaktowego czajnikowo.pl",
+              "timedOut": null,
+              "duration": 3428,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.czajnikowy.com.pl/');\ncy.get('#menu-item-18660 > .nav-top-link').click();\ncy.get('.forminator-button').click();\ncy.get('#name-1 > .forminator-field > .forminator-error-message').should('contain', 'Proszę podać imię');\ncy.get('#email-1 > .forminator-field > .forminator-error-message').should('contain', 'Email jest wymagany');\ncy.get('#textarea-1 > .forminator-field > .forminator-error-message').should('contain', 'Proszę wpisać treść wiadomości');",
+              "err": {},
+              "uuid": "fcdd110c-d9a1-40a6-b2df-4a610240af8a",
+              "parentUUID": "648bf82d-0fd1-46e0-943e-d2a896d4d58f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7563684-a8fa-4950-956c-7df1643e313c",
+            "fcdd110c-d9a1-40a6-b2df-4a610240af8a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12751,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "isoDateTime",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
